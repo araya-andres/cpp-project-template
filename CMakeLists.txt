@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.8.11)
 
 # Change project name
-set (PROJECT_NAME cpp-project-template)
+set (PROJECT_NAME app)
 set (PROJECT_TEST_NAME ${PROJECT_NAME}-ut)
 
 project (${PROJECT_NAME} C CXX)
@@ -16,14 +16,13 @@ set (SRC_DIR src)
 set (INCL_DIR include)
 
 # Compiler flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall -Werror")
 
 include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 
 # Important: Include all source files on this list
 set (SOURCE
     ${SRC_DIR}/main.cpp
-    ${SRC_DIR}/greeter.cpp
 )
 
 # Output folder
